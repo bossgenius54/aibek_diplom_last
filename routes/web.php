@@ -42,6 +42,7 @@ Route::post('/brand/save', 'BrandController@save', function (Request $request) {
 
 //Customer
 Route::get('/customer', 'CustomerController@index');
+Route::post('/customer/call_request', 'CustomerController@call_request');
 Route::get('/customer/add', 'CustomerController@add');
 Route::get('/customer/edit/{id}', 'CustomerController@edit', function (Request $request,$id) {});
 Route::post('/customer/save', 'CustomerController@save', function (Request $request) {});

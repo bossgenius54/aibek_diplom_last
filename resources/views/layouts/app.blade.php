@@ -32,16 +32,16 @@
                 @auth
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="">{{ __('Dashboard') }}</a>
+                    <a class="nav-link" href="">Доска</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/order">{{ __('Orders') }}</a>
+                    <a class="nav-link" href="/order">Заявки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/customer">{{ __('Customers') }}</a>
+                    <a class="nav-link" href="/customer">Клиенты</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/product">{{ __('Products') }}</a>
+                    <a class="nav-link" href="/product">Продукты</a>
                 </li>
                 </ul>
                 @endauth
@@ -50,26 +50,26 @@
                 @guest
                 @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">Авторизация</a>
                     </li>
                 @endif
 
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link" href="{{ route('register') }}">Регистрация</a>
                     </li>
                 @endif
                 @endguest
 
                 @auth
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown" aria-expanded="false">User <span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown10">
-                        <li><a href="/profile" class="dropdown-item" >{{ __('Profile') }}</a></li>
-                        <li><a href="/setting" class="dropdown-item" >{{ __('Setting') }}</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown" aria-expanded="false">Профиль <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown10">
+                        <li><a href="/profile" class="dropdown-item" >Профиль</a></li>
+                        <li><a href="/setting" class="dropdown-item" >Настройки</a></li>
                         <li role="separator" class="divider"></li>
                         <li>
-                            <a href="#" onclick="Hammer.exit()" class="dropdown-item">{{ __('Exit') }}</a>
+                            <a href="#" onclick="Hammer.exit()" class="dropdown-item">Выйти</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
                             </form>
@@ -84,7 +84,7 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
+    <main class="container pt-5">
     @yield('content')
     </main>
 
