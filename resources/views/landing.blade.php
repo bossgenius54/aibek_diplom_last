@@ -509,28 +509,28 @@
                 <div id="sendmessage">Номеріңізді сақтап қалдық, жақын арада сізге хабарласамыз!</div>
                 <div id="errormessage"></div>
 
+                <h4 class="title">Аты жөніңізді қалдырыңыз, біздің менеджерлеріміз сізге жақын арада хабарласады</h4>
                 <form action="" method="post" role="form" class="contactForm">
                     {{ csrf_field() }}
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Сіздің атыңыз
-
-" data-rule="minlen:4" data-msg="Кемінде 4 таңбаны енгізіңіз" />
+                            <input type="text" name="first_name" class="form-control" id="name" placeholder="Сіздің атыңыз" data-rule="minlen:2" data-msg="Кемінде 4 таңбаны енгізіңіз" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Электрондық пошта мекенжайыңыз
-" data-rule="email" data-msg="Жарамды электрондық поштаны енгізіңіз" />
+                            <input type="text" name="last_name" class="form-control" id="name" placeholder="Сіздің тегіңіз" data-rule="minlen:4" data-msg="Тегіңіз кемінде 4 таңбалы болу шарт" />
                             <div class="validation"></div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Тақырып" data-rule="minlen:4" data-msg="Тақырыптың кем дегенде 8 таңбасын енгізіңіз" />
-                        <div class="validation"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Бізге бірдеңе жазыңыз" placeholder="Хабарлама ..."></textarea>
-                        <div class="validation"></div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Электрондық пошта мекен-жайыңыз" data-rule="email" data-msg="Жарамды электрондық поштаны енгізіңіз" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="number" class="form-control" name="phone" id="email" placeholder="87001000000" data-rule="phone" data-msg="Жарамды телефон номеріңізді енгізіңіз" />
+                            <div class="validation"></div>
+                        </div>
                     </div>
                     <div class="text-center"><button type="submit">Жіберу</button></div>
                 </form>

@@ -45,6 +45,15 @@ class CustomerController extends MainController
 
     public function call_request(Request $request)
     {
-        return 'OK';
+        $cust = new Customer();
+        $cust->first_name = $request->name;
+        $cust->last_name = $request->lastname;
+        $cust->email = $request->email;
+        $cust->phone = $request->phone;
+        if ($cust->save()){
+            return 'OK';
+        } else {
+            return 'Не удалось успешно сохранить ваши данные!';
+        }
     }
 }
